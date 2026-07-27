@@ -1,0 +1,87 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.lightBlue,
+        appBar: AppBar(
+          title: Text('Student Profile Card'),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ClipOval(
+                // Adjust the radius here
+                child: Image.network(
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7fHtUKoBFRwnW-AKzFKZFTRtegM2MrVWHRI0TxRV_Mw&s=10",
+                  width: 150,
+                  height: 150,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              SizedBox(height: 10),
+              Text(
+                "SUNDARA SURYA HANUMAN ",
+                style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic),
+              ),
+              SizedBox(height: 10),
+              Text(
+                "Roll No. : 24PA1A05M0",
+                style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
+              ),
+              Text(
+                "Branch: CSE",
+                style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
+              ),
+              Container(
+                width: 250.0, // Sets the fixed width
+                height: 50.0, // Sets the fixed height
+                color: Colors.white, // Sets a background color
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.mail,
+                      color: Colors.black,
+                      size: 50,
+                    ),
+                    Text(
+                      ": surya@gmail.com",
+                      style:
+                          TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 10),
+              Container(
+                width: 200.0, // Sets the fixed width
+                height: 50.0, // Sets the fixed height
+                color: Colors.white, // Sets a background color
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      color: Colors.black,
+                      size: 50,
+                    ),
+                    Text(
+                      ": 9876543210",
+                      style:
+                          TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 10),
+            ],
+          ),
+        ),
+      ),
+    ),
+  );
+}
