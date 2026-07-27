@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Color(0xff000000),
+        appBar: AppBar(
+          title: Text('This is my first app'),
+        ),
+        body: Center(
+          child: Container(
+            width: 300,
+            height: 300,
+            color: Color(0xfffe0000),
+            alignment: Alignment.center,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.network(
+                  "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
+                  width: 150,
+                  height: 150,
+                ),
+                SizedBox(height: 10),
+                Icon(
+                  Icons.school,
+                  color: Colors.black,
+                  size: 50,
+                ),
+                SizedBox(height: 10),
+                Text(
+                  "Hello,Flutter ",
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
