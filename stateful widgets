@@ -1,0 +1,63 @@
+import 'package:flutter/material.dart';
+
+// 1. Entry point of the program
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  State<MyApp> createState() => MyAppState();
+}
+
+// 2. The StatefulWidget class
+class MyAppState extends State<MyApp> {
+  int c = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text(
+              "Stateful Widget Example",
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                Icon(
+                  Icons.school,
+                  color: Colors.red,
+                  size: 50,
+                ),
+                SizedBox(height: 10),
+                Text(
+                  "count:$c",
+                  style: TextStyle(fontSize: 20),
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        c++;
+                      });
+                    },
+                    child: Text("Click Me")),
+                SizedBox(height: 20),
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        c = 0;
+                      });
+                    },
+                    child: Text("reset"))
+              ]))),
+    );
+  }
+}
+
+// 3. The State class where data and UI liv
